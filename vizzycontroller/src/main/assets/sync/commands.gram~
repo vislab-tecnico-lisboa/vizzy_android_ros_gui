@@ -1,0 +1,6 @@
+#JSGF V1.0;
+
+grammar commands;
+
+public <COMMANDS> = (hello | good bye | thank you) little robot | show me the (office | laboratory | meeting room | elevator | bathroom);
+

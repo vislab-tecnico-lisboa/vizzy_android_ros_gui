@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:keepScreenOn="true"
+    tools:context="com.example.vizzylearning.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vizzy Learning"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <org.ros.android.view.RosImageView
+        android:id="@+id/imageView1"
+        android:src="@drawable/abc_btn_radio_material"
+        android:layout_width="640sp"
+        android:layout_height="480sp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20sp"
+        android:layout_alignParentRight="true" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="640sp"
+        android:layout_height="480sp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20sp"
+        android:layout_alignParentRight="true" />
+
+    <ToggleButton
+        android:id="@+id/toggleAudio"
+        android:background="@drawable/check_audio"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:textOn=""
+        android:textOff=""
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_alignParentLeft="true" />
+
+    <ToggleButton
+        android:id="@+id/toggleVoice"
+        android:background="@drawable/check_voice"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:textOn=""
+        android:textOff=""
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_alignBottom="@+id/toggleAudio"
+        android:layout_toRightOf="@+id/toggleAudio"
+        android:layout_marginLeft="20sp"/>
+
+    <ToggleButton
+        android:id="@+id/toggleController"
+        android:background="@drawable/check_controller"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:textOn=""
+        android:textOff=""
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_below="@+id/toggleVoice"
+        android:layout_marginTop="20sp"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:id="@+id/buttonLearn"
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:focusable="false"
+        android:text="Imag"
+        android:focusableInTouchMode="false"
+        android:layout_alignBottom="@+id/toggleController"
+        android:layout_toRightOf="@+id/toggleController"
+        android:layout_marginLeft="20sp"/>
+
+    <TextView
+        android:id="@+id/Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" "
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

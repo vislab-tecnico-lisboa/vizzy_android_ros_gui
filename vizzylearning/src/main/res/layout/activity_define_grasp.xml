@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vizzylearning.DefineGrasp">
+
+    <ToggleButton
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:id="@+id/toggleButton1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textOff="BOX"
+        android:textOn="BOX"/>
+
+    <ToggleButton
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:id="@+id/toggleButton2"
+        android:layout_alignTop="@+id/toggleButton1"
+        android:layout_toRightOf="@+id/toggleButton1"
+        android:layout_toEndOf="@+id/toggleButton1"
+        android:layout_marginLeft="10dp"
+        android:textOff="POS"
+        android:textOn="POS"/>
+
+    <ToggleButton
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:id="@+id/toggleButton3"
+        android:layout_below="@+id/toggleButton1"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textOff="ROT"
+        android:textOn="ROT"/>
+
+    <ToggleButton
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:id="@+id/toggleButton4"
+        android:layout_alignTop="@+id/toggleButton3"
+        android:layout_toRightOf="@+id/toggleButton3"
+        android:layout_toEndOf="@+id/toggleButton3"
+        android:layout_marginLeft="10dp"
+        android:textOff="OK"
+        android:textOn="OK"/>
+
+    <ImageView
+        android:id="@+id/Image1"
+        android:layout_width="640dp"
+        android:layout_height="480dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:id="@+id/Image2"
+        android:layout_width="640dp"
+        android:layout_height="480dp"
+        android:layout_alignLeft="@+id/Image1"
+        android:layout_alignStart="@+id/Image1"
+        android:layout_alignTop="@+id/Image1"/>
+
+    <com.example.vizzylearning.Tools.OpenGLObject.MyGLSurfaceView
+        android:id="@+id/GLSurface"
+        android:layout_width="640dp"
+        android:layout_height="480dp"
+        android:layout_alignLeft="@+id/Image1"
+        android:layout_alignStart="@+id/Image1"
+        android:layout_alignTop="@+id/Image1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Box(x0,y0,x1,y1): "
+        android:layout_below="@+id/toggleButton3"
+        android:id="@+id/textBox"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0,0,0,0"
+        android:id="@+id/boxVal"
+        android:layout_alignTop="@+id/textBox"
+        android:layout_toRightOf="@+id/textBox"
+        android:layout_toEndOf="@+id/textBox" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ArrowPos(x,y): "
+        android:id="@+id/textPos"
+        android:layout_below="@+id/textBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0,0"
+        android:id="@+id/posVal"
+        android:layout_alignTop="@+id/textPos"
+        android:layout_toRightOf="@+id/textPos"
+        android:layout_toEndOf="@+id/textPos" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ArrowRot(x,y,z): "
+        android:id="@+id/textRot"
+        android:layout_below="@+id/textPos"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0,0,0"
+        android:id="@+id/rotVal"
+        android:layout_alignTop="@+id/textRot"
+        android:layout_toRightOf="@+id/textRot"
+        android:layout_toEndOf="@+id/textRot" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/Image1"
+        android:layout_marginTop="10dp"
+        android:max="360"
+        android:progress="180"
+        android:progressDrawable="@android:color/darker_gray"
+        android:visibility="invisible"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true" />
+
+</RelativeLayout>
